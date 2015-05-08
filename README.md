@@ -2,8 +2,6 @@
 
 NodeJS pub/sub socket benchmarking transports: TCP, TLS, HTTP, HTTPS.  
 
-__*WORK IN PROCESS*__
-
 ## Run
 
 ```
@@ -32,7 +30,47 @@ AMP as used by axon provides a useful solution to framing, allows any codec with
 
 ## Benchmarking Results
 
-__*WORK IN PROCESS*__
+```
+For a 100 byte message.  
+
+---------------------------------------------
+| RESULTS FOR SOCKET http ~
+---------------------------------------------
+|   median: 96,153 ops/s
+|     mean: 93,661 ops/s
+|    total: 472,991 ops in 5.05s
+|  through: 9.37 MB/s
+---------------------------------------------
+| RESULTS FOR SOCKET https ~
+---------------------------------------------
+|   median: 13,851 ops/s
+|     mean: 9,073 ops/s
+|    total: 45,160 ops in 4.977s
+|  through: 0.91 MB/s
+---------------------------------------------
+| RESULTS FOR SOCKET tcp ~
+---------------------------------------------
+|   median: 277,777 ops/s
+|     mean: 205,494 ops/s
+|    total: 1,030,146 ops in 5.013s
+|  through: 20.55 MB/s
+---------------------------------------------
+| RESULTS FOR SOCKET tls ~
+---------------------------------------------
+|   median: 178,571 ops/s
+|     mean: 172,668 ops/s
+|    total: 861,614 ops in 4.99s
+|  through: 17.27 MB/s
+---------------------------------------------
+| RESULTS FOR SOCKET httpnet ~
+---------------------------------------------
+|   median: 357,143 ops/s
+|     mean: 309,020 ops/s
+|    total: 1,556,227 ops in 5.036s
+|  through: 30.9 MB/s
+---------------------------------------------
+
+```
 
 ## License
 

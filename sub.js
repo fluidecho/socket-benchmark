@@ -6,9 +6,9 @@ var babar = require('babar');
 var colors = require('colors');
 
 var options = {
-  key: __dirname + '/lib/https/keys/key.pem',
-  cert: __dirname + '/lib/https/keys/cert.pem',
- 	//ca: [ __dirname + '/lib/https/keys/cert.pem' ],  
+  key: __dirname + '/sockets/https/keys/key.pem',
+  cert: __dirname + '/sockets/https/keys/cert.pem',
+ 	//ca: [ __dirname + '/sockets/https/keys/cert.pem' ],  
   rejectUnauthorized: false
 };
 

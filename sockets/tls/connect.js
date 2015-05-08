@@ -36,7 +36,7 @@ function Connect(options) {
 	var self = this;
 
   options.host = '127.0.0.1';
-  options.port = 3455;  
+  options.port = 3456;  
   //var sock = new tls.Socket(options);
   //sock.setNoDelay();
   

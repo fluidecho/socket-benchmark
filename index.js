@@ -12,9 +12,9 @@
 
 
 exports.bind = function (options) {
-	return require('./lib/'+options.transport+'/bind').bind(options);
+	return require('./sockets/'+options.transport+'/bind').bind(options);
 };
 
 exports.connect = function (options) {
-	return require('./lib/'+options.transport+'/connect').connect(options);
+	return require('./sockets/'+options.transport+'/connect').connect(options);
 };

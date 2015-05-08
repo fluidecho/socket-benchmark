@@ -45,7 +45,7 @@ function Connect(options) {
   options.path = '/benchmark/sub/?_protocol=amp';
   options.method = 'PUT';
   options.hostname = '127.0.0.1';
-  options.port = 3455;  
+  options.port = 3458;  
   
   var sock = http.request(options, function(res) {
     

@@ -39,7 +39,7 @@ function Connect() {
   var options = {};   // set options for http request.
 
   options.host = '127.0.0.1';
-  options.port = 3455;  
+  options.port = 3457;  
   var sock = new net.Socket;
   sock.setNoDelay();
 

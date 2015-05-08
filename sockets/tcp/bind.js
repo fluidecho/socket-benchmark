@@ -60,7 +60,7 @@ function Bind(options) {
     self.emit('error', err);
   });        
 
-  server.listen(3455, '127.0.0.1', function() {
+  server.listen(3459, '127.0.0.1', function() {
     preview('bound at: ' + 'tcp://127.0.0.1:3455');
   });
   

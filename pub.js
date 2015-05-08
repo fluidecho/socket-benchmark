@@ -3,9 +3,9 @@ var argv = require('minimist')(process.argv.slice(2));
 var sockets = require('./');
 
 var options = {
-  key: __dirname + '/lib/https/keys/key.pem',
-  cert: __dirname + '/lib/https/keys/cert.pem',
- 	//ca: [ __dirname + '/lib/https/keys/cert.pem' ],
+  key: __dirname + '/sockets/https/keys/key.pem',
+  cert: __dirname + '/sockets/https/keys/cert.pem',
+ 	//ca: [ __dirname + '/sockets/https/keys/cert.pem' ],
   rejectUnauthorized: false,
 	requestCert: true
 };

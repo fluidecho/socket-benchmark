@@ -57,7 +57,7 @@ function Bind(options) {
     self.emit('error', err);
   });        
 
-  server.listen(3455, '127.0.0.1', function() {
+  server.listen(3456, '127.0.0.1', function() {
     preview('bound at: ' + 'tls://127.0.0.1:3455');
   });
   

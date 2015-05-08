@@ -22,17 +22,35 @@ I want to be able to benchmark test which native nodejs socket transports are fa
 
 I've created two programs, a _pub_ and a _sub_, which will count the number of messages that can be sent per second.  
 
+### Message Framing
+
 When using socket transports like TCP and TLS, which are 'streaming', a message needs framing. 
 
 Message framing can be achieved using something simple like a newline '\n', however something more robust is useful.
 
 AMP as used by axon provides a useful solution to framing, allows any codec within such as json, results as a buffer which is native to the nodejs sockets.
 
-## Benchmarking Results
+### MTU
+
+MTU (maximum transmission unit) make a big difference in performance. Just to explain MTU defines the amount of bytes that should be sent across the network (over the wire) at one time.
+
+Generally speaking the bigger the better, when message batching is being used. By default most network MTUs are set to 1500. I should also mention for best results both peers should be set to the same MTU.
+
+AWS EC2 instances are either set to 1500 for smaller instances and 9001 (jumbo frames) for larger instances.
+
+Google Compute uses 1500 (1460 body).
+
+To change a MTU setting of say the eth0 network to 9000 bytes (temp):
 
 ```
+sudo ifconfig eth0 mtu 9000
+```
+
+## Benchmarking Results
+
 For a 100 byte message.  
 
+```
 ---------------------------------------------
 | RESULTS FOR SOCKET http ~
 ---------------------------------------------
@@ -69,7 +87,6 @@ For a 100 byte message.
 |    total: 1,556,227 ops in 5.036s
 |  through: 30.9 MB/s
 ---------------------------------------------
-
 ```
 
 ## License

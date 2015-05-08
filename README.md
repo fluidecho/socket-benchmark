@@ -45,6 +45,26 @@ To change a MTU setting of say the eth0 network to 9000 bytes (temp):
 ```
 sudo ifconfig eth0 mtu 9000
 ```
+To view network MTU settings:
+
+```
+netstat -i
+```
+or
+```
+ifconfig
+```
+
+### Batching
+
+Batching up messages to fit the MTU also makes a big difference to performance, by factors or 2x to 3x!
+
+Have you heard the name John Nagle? You should if you care about performance. The Nagle algorithm basically batches up data to best fit the MTU before sending over the TCP wire. There are now faster algorithms, as developed by zeromq and others.
+
+To get the most out of a network's MTU, we need to apply our own batching algorithm to message delivery.
+
+Note that if the message size is >= the MTU then batching is useless.
+
 
 ## Benchmarking Results
 

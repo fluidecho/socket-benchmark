@@ -1,0 +1,56 @@
+{
+  "name": "socket-benchmark",
+  "description": "NodeJS pub/sub socket benchmarking transports: TCP, TLS, HTTP, HTTPS.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "homepage": "https://github.com/fluidecho/socket-benchmark",
+  "author": {
+    "name": "Mark W. B. Ashcroft",
+    "email": "mark@fluidecho.com",
+    "url": "http://fluidecho.com"
+  },
+  "contributors": [
+    {
+      "name": "Mark W. B. Ashcroft",
+      "email": "mark@fluidecho.com"
+    }
+  ],
+  "dependencies": {
+    "amp": "^0.3.1",
+    "amp-message": "^0.1.2",
+    "babar": "0.0.3",
+    "clone": "^1.0.2",
+    "colors": "^1.1.0",
+    "humanize-number": "0.0.2",
+    "minimist": "^1.1.1",
+    "preview": "^0.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fluidecho/socket-benchmark.git"
+  },
+  "bugs": {
+    "url": "http://github.com/fluidecho/socket-benchmark/issues",
+    "email": "mail@fluidecho.com"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "zmq",
+    "0mq",
+    "zeromq",
+    "axon",
+    "amp",
+    "messaging",
+    "benchmarking",
+    "benchmark",
+    "sockets",
+    "tcp",
+    "tls",
+    "http",
+    "https"
+  ]
+}
